@@ -15,6 +15,8 @@ body {
     top: 50%;
     left: 50%;
     position: absolute;
+    height: 135px;
+    width: 135px;
     transform: translate(-50%,-50%);
 }
 .circles-stuff{
