@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Use title if it's in the page YAML frontmatter -->
+		<title>CRUD Operations</title>
+
+		<meta name="description" content="Instructions on how to install XAMPP for OSX distributions." />
+		
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<form id="crudForm">
+				<div class="form-group">
+					<label>NAME:</label>
+					<input id="formName" name="formName" type="text">
+				</div>
+				<div class="form-group">
+					<label>PHONE:</label>
+					<input id="formPhone" name="formPhone" type="number">
+				</div>
+				<div class="form-group">
+					<label>PLACE:</label>
+					<input id="formPlace" name="formPlace" type="text">
+				</div>
+				<div class="form-group">
+					<label>AGE:</label>
+					<input id="formAge" name="formAge" type="number">
+				</div>
+				<div class="form-group">
+					<label>HEIGHT:</label>
+					<input id="formHeight" name="formHeight" type="number">
+				</div>
+				<div class="form-group">
+					<label>WEIGHT:</label>
+					<input id="formWeight" name="formWeight" type="number">
+				</div>
+				<div class="form-group">
+					<label>E-SIGN:</label>
+					<input id="formESign" name="formESign" type="text">
+				</div>
+				<div class="form-group submit-action">
+					<button id="formSubmit" type="button">Submit</button>
+				</div>
+			</form>
+
+			<div class="crudTable">
+				<table>
+					<thead>
+						<tr>
+							<th>
+								Name
+							</th>
+							<th>
+								PHONE
+							</th>
+							<th>
+								PLACE
+							</th>
+							<th>
+								AGE
+							</th>
+							<th>
+								HEIGHT
+							</th>
+							<th>
+								WEIGHT
+							</th>
+							<th>
+								E-SIGN
+							</th>
+							<th>
+								ACTION
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Mohan</td>
+							<td>9000804607</td>
+							<td>Hyderabad</td>
+							<td>24</td>
+							<td>5.9</td>
+							<td>69</td>
+							<td>mohan9k7</td>
+							<td>
+								<button class="editRow"><i class="fa fa-pencil"></i></button>
+								<button class="deleteRow"><i class="fa fa-trash"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- JS Libraries -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/custom.js"></script>
+	</body>
+</html>

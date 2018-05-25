@@ -1,0 +1,40 @@
+*, *:focus{
+    outline: none !important;
+}
+*{
+    box-sizing: border-box;
+}
+html, body {
+    background-color: #ffeead;
+    margin: 10px;
+}
+.container form{
+    border: 1px solid #252;
+    padding: 15px;
+    max-width: 400px;
+}
+.container form .form-group{
+    margin: 15px;
+}
+.container form .form-group.submit-action{
+    text-align: right;
+}
+.container form .form-group input{
+    width: calc(100% - 80px);
+    float: right;
+}
+.container .crudTable{
+    margin-top: 50px;
+}
+.container .crudTable table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.container .crudTable td, .container .crudTable th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+.container .crudTable tbody tr:nth-child(even) {
+    background-color: #dddddd;
+}
