@@ -19,6 +19,15 @@ html, body {
 .container form .form-group.submit-action{
     text-align: right;
 }
+.container form .form-group.submit-action #saveSubmit{
+    display: none;
+}
+.container form .form-group.submit-action.edit #saveSubmit{
+    display: inline-block;
+}
+.container form .form-group.submit-action.edit #formSubmit{
+    display: none;
+}
 .container form .form-group input{
     width: calc(100% - 80px);
     float: right;
