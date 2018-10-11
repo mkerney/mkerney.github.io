@@ -1,0 +1,342 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25 Apr, 2017, 7:43:38 PM
+    Author     : Ahex
+*/
+.about-wrapper{
+    .img-center{
+        margin: 0 auto;
+    }
+    p{
+        color         : #000;
+        margin        : 30px auto 0;
+        font-size     : 15px;
+        max-width     : 100%;
+        text-align    : left;
+         font-family    : "montserrat-light",sans-serif;
+        line-height   : 25px;
+        letter-spacing: 1px;
+        strong{  
+            display: block;   
+            font-family: "montserrat-medium", sans-serif;
+            position: relative;
+            padding-bottom: 15px;
+            &:after{
+                width: 40px;
+                height: 4px;
+                content:"";
+                background: linear-gradient(to right,#ffa402,#ff5661,#ff279c);
+                position: absolute;
+                margin: 15px auto 0;
+                display: block;
+                left: 20px;
+                bottom: 10px;
+                transform: translate(-50%);
+            }
+        }
+        .btn{
+            color: #000;
+            margin: 15px 0 0;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+    h4{
+        color         : #000;
+        margin        : 30px auto 0;
+        font-size     : 15px;
+        max-width     : 100%;
+        text-align    : left;
+        line-height   : 25px;
+        letter-spacing: 1px;
+        strong{  
+            display: block;   
+            font-family: "montserrat-medium", sans-serif;
+            position: relative;
+            padding-bottom: 15px;
+            &:after{
+                width: 40px;
+                height: 4px;
+                content:"";
+                background: linear-gradient(to right,#ffa402,#ff5661,#ff279c);
+                position: absolute;
+                margin: 15px auto 0;
+                display: block;
+                left: 20px;
+                bottom: 10px;
+                transform: translate(-50%);
+            }
+        }
+        &:first-of-type{
+            margin-top: 0;
+        }
+        .btn{
+            color: #000;
+            margin: 15px 0 0;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+    ul{
+       
+        &.custom-list{
+            list-style-type: none;
+            padding-left: 15px;
+            li{
+                font-size      : 15px;
+                line-height    : 25px;
+                font-family    : "montserrat-light",sans-serif;
+                margin-bottom  : 15px;
+                letter-spacing : 1px;
+                position       : relative;
+                list-style-type: none;
+                &:after{
+                    top             : 10px;
+                    left            : -15px;
+                    width           : 5px;
+                    height          : 5px;
+                    content         : "";
+                    position        : absolute;
+                    border-radius   : 50%;
+                    background-color: #000;
+                }
+            }
+           
+        }
+        &.cyberInsurance-custom-list{ 
+            padding-left: 15px;
+            li{
+                font-size      : 15px;
+                line-height    : 25px;
+                font-family    : "montserrat-light",sans-serif;
+                margin-bottom  : 15px;
+                letter-spacing : 1px;
+                position       : relative;
+                list-style-type: none;
+                &:after{
+                    top             : 10px;
+                    left            : -15px;
+                    width           : 5px;
+                    height          : 5px;
+                    content         : "";
+                    position        : absolute;
+                    border-radius   : 50%;
+                    background-color: #000;
+                }
+            }
+            &.custom-icons {
+                padding-left: 0px;
+                    li:after{
+                            background-color: white;
+                    }
+                    li img{
+                        padding-right:20px;
+                        height:35px;
+                    }
+            }
+            
+        }
+        
+    }
+    .btn-insurance{
+        color: #000;
+        &:hover, &:active, &:focus{
+            color: #000;
+        }
+    }
+    .img-insurance{  
+        margin-bottom: 20px;
+    }
+    .img-heading{
+        margin-top: 4px;
+    }
+    .compliance-build{
+        object-fit: cover;
+        height: 271px;
+    }
+    .compliance-neural{
+        object-fit: cover;
+        height: 271px;
+    }
+    .neural-image-wrapper{
+        position: relative;
+        .compliance-neural{
+            top: 0;
+            left: -20.6%;
+            width: 17.5%;
+            margin: 0;
+            position: absolute;
+        }
+    }
+    .about-banner{
+        height               : 330px;
+        background           : rgba(0, 0, 0, 0) url("../images/about-2.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+        position: relative;
+        &:before{
+            top             : 0;
+            left            : 0;
+            right           : 0;
+            bottom          : 0;
+            content         : "";
+            position        : absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        &.second-step{  
+            background: rgba(0, 0, 0, 0) url("../images/slider/welcome-ioe.jpg") no-repeat scroll center center/ cover ;
+            background-attachment: fixed;
+        }
+        &.enterprise-aios{  
+            background: rgba(0, 0, 0, 0) url("../images/customer-journey-bg01.jpg") no-repeat scroll center center/ cover ;
+            background-attachment: fixed;
+        }
+        &.computing{
+            background: rgba(0, 0, 0, 0) url("../images/slider/cognitive-computing.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.intelligence-main{
+            background: rgba(0, 0, 0, 0) url("../images/slider/intelligence-of-everything.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.insurance{
+            background: rgba(0, 0, 0, 0) url("../images/technology.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.audit{
+            background: rgba(0, 0, 0, 0) url("../images/audit.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.intelligence{ 
+            background: rgba(0, 0, 0, 0) url("../images/intelligence.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        } 
+        &.market-intelligence-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/market-intelligence-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.audit-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/audit-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        } 
+        &.financials-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/financials-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.insurance-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/insurance-bg01.jpg") no-repeat scroll top center / cover;
+            background-attachment: fixed;
+        }
+        &.corporate-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/corporate-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.sanctions-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/sanctions-bg01.jpg") no-repeat scroll bottom center / cover;
+            background-attachment: fixed; 
+        } 
+        &.element-trace-bg{ 
+            background: rgba(0, 0, 0, 0) url("../images/element-trace-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        } 
+        &.cyberinsurance-bg{
+            background: rgba(0, 0, 0, 0) url("../images/cyber-Insurance.jpg") no-repeat scroll bottom center / cover;
+            background-attachment: fixed;
+        }
+        &.customer-journey-bg{
+            background: rgba(0, 0, 0, 0) url("../images/customer-journey-bg01.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        } 
+        &.element-risk-bg{
+            background: rgba(0, 0, 0, 0) url("../images/element-risk-bg.jpg") no-repeat scroll center center / cover;
+            background-attachment: fixed;
+        }
+        &.bank-bg{
+            background: rgba(0, 0, 0, 0) url("../images/element-compliance-build.jpg") no-repeat scroll bottom center / cover;
+            background-attachment: fixed;
+            h2{
+                font-family: 'montserrat-medium',sans-serif;
+            }
+/*
+            + .about-content{
+                 *{
+                     font-family: 'montserrat-medium';
+                     & p, & li{
+                         font-family: 'montserrat-light';
+                     }
+                 }
+               h4{
+                    strong{
+                        font-family: 'montserrat-medium';
+                    }
+                }
+                p{
+                    font-family: 'montserrat-light';
+                }
+                li{
+                    font-family: 'montserrat-light';
+                }
+                b{
+                    font-family: 'montserrat-medium';
+                }
+            }
+*/
+        }
+
+        
+
+        &.no-bg{
+            background: none;
+        }
+        h2{
+            color         : #fff;
+            margin        : 0;
+            position      : relative;
+            font-size     : 40px;  
+            text-align    : center;
+            padding-top   : 100px;
+            text-transform: uppercase;
+            &:after{
+                width: 40px;
+                height: 4px;
+                content:"";
+                background: linear-gradient(to right,#ffa402,#ff5661,#ff279c);
+                position: absolute;
+                margin: 15px auto 0;
+                display: block;
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        p{
+            color     : #fff;
+            position  : relative;
+            max-width : 70%; 
+            text-align: center;  
+        }
+    }
+    .about-content{  
+        padding: 30px 0;
+        background: #fff;
+        p{
+            margin: 0 0 15px 0;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .about-banner{
+        h2{
+            font-size: 35px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

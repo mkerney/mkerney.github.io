@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 May, 2017, 7:48:09 PM
+    Author     : Ahex
+*/
+
+body{
+    &.financials{
+        background           : rgba(0, 0, 0, 0) url("../images/financials.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.insurance{
+        background           : rgba(0, 0, 0, 0) url("../images/insurance.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.audit{
+        background           : rgba(0, 0, 0, 0) url("../images/audit.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.intelligence{
+        background           : rgba(0, 0, 0, 0) url("../images/intelligence.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.sensory-hub{
+        background           : rgba(0, 0, 0, 0) url("../images/sensory.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.cognitive-hub{
+        background           : rgba(0, 0, 0, 0) url("../images/cognitive.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.discovery-hub{
+        background           : rgba(0, 0, 0, 0) url("../images/discovery.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+    &.management-hub{
+        background           : rgba(0, 0, 0, 0) url("../images/management.jpg") no-repeat scroll center center/ cover ;
+        background-attachment: fixed;
+    }
+}
