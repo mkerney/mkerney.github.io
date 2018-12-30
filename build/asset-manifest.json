@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.e5bce0ae.chunk.css",
-  "main.js": "/static/js/main.142d5256.chunk.js",
-  "main.js.map": "/static/js/main.142d5256.chunk.js.map",
-  "static/js/1.fa92c112.chunk.js": "/static/js/1.fa92c112.chunk.js",
-  "static/js/1.fa92c112.chunk.js.map": "/static/js/1.fa92c112.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/event-hyderabad.jpg": "/static/media/event-hyderabad.6a4e542e.jpg",
-  "static/css/main.e5bce0ae.chunk.css.map": "/static/css/main.e5bce0ae.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.5bd0020de25b87be08e47f08f01205fe.js": "/precache-manifest.5bd0020de25b87be08e47f08f01205fe.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/build/static/css/main.e5bce0ae.chunk.css",
+  "main.js": "/build/static/js/main.1c8a7f25.chunk.js",
+  "main.js.map": "/build/static/js/main.1c8a7f25.chunk.js.map",
+  "static/js/1.fa92c112.chunk.js": "/build/static/js/1.fa92c112.chunk.js",
+  "static/js/1.fa92c112.chunk.js.map": "/build/static/js/1.fa92c112.chunk.js.map",
+  "runtime~main.js": "/build/static/js/runtime~main.3923d73d.js",
+  "runtime~main.js.map": "/build/static/js/runtime~main.3923d73d.js.map",
+  "static/media/event-hyderabad.jpg": "/build/static/media/event-hyderabad.6a4e542e.jpg",
+  "static/css/main.e5bce0ae.chunk.css.map": "/build/static/css/main.e5bce0ae.chunk.css.map",
+  "index.html": "/build/index.html",
+  "precache-manifest.2be9c231d51f04a24465891a57df06f6.js": "/build/precache-manifest.2be9c231d51f04a24465891a57df06f6.js",
+  "service-worker.js": "/build/service-worker.js"
 }
