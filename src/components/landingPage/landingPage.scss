@@ -1,0 +1,63 @@
+.landing-page-section {
+    text-align: center;
+    background-color: #282c34;
+    background: url('assets/images/charminar-hyderabad.jpg') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    &::after{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        content: '';
+        display: block;
+        position: absolute;
+        background-color: rgba(0,0,0,0.5);
+    }
+    .content-route{
+        top: 50px;
+        right: 50px;
+        z-index: 1;
+        position: absolute;
+        &:hover{
+            text-decoration: none;
+        }
+        > img{
+            animation: arrow-right 1s infinite;
+        }
+        > span{
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .headerOne{
+        color: #fff;
+        z-index: 1;
+        position: relative;
+        font-size: 72px;
+        .headerOneStatic{
+            margin-right: 10px;
+        }
+    }
+}
+
+@keyframes arrow-right {
+    0%{
+        transform: translateX(-50px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 0;
+    }
+}

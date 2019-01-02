@@ -1,0 +1,12 @@
+@import './assets/customScss/bootstrap/scss/bootstrap.scss';
+
+/*   common styles   */
+@import './assets/customScss/styles/_fonts.scss';
+@import './assets/customScss/styles/_mixins.scss';
+@import './assets/customScss/styles/_color.scss';
+@import './assets/customScss/styles/_common.scss';
+@import './assets/customScss/styles/_custom-modal.scss';
+
+@import './components/landingPage/landingPage.scss';
+@import './components/contentPage/contentPage.scss';
+@import './components/ratingStars/ratingStars.scss';

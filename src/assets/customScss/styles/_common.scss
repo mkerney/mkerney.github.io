@@ -1,0 +1,719 @@
+*{
+  outline: none !important;
+}
+*:focus{
+  outline: none !important;
+}
+body {
+  font-family  : $ptsans;
+  @extend .ptsans-regular;
+}
+.ptsans-regular{
+  font-weight: 400;
+}
+.ptsans-bold{
+  font-weight: 700;
+}
+strong, b{
+  font-weight: 700 !important;
+}
+.stop-scrolling-div{
+  @include transition(all 0.3s ease-in-out);
+}
+.stop-scrolling{
+  width: 100%;
+  overflow: hidden;
+    @media (max-width: 480px) {
+    .stop-scrolling-div{
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 8;
+      position: fixed;
+      background-color: rgba($color: $black, $alpha: .6);
+    }
+  }
+}
+.btn{
+  &:focus{
+    @include box-shadow(none);
+  }
+}
+
+input[type="checkbox"]{
+  cursor: pointer;
+}
+
+.form-group, .form-check{
+  position: relative;
+  .error-input-msg{
+    left: 0;
+    width: 100%;
+    color: red;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+/*--  Custom Checkbox Styles  --*/
+.custom-check{
+  margin-bottom: 5px;
+  label{
+    &.checkbox-inline{
+      input[type="checkbox"]{
+        display:none;
+        &:checked {
+          +  span{
+            border          : 1px solid $black;
+            padding         : 3px;
+            background-color: $white;
+            @include border-radius(0);
+            @include transition(all 0.3s ease-in-out);
+            i{
+              opacity: 1;
+            }
+          }
+        }
+        + span{
+          width           : 18px;
+          border          : 1px solid $custom-check-border;
+          cursor          : pointer;
+          height          : 18px;
+          margin          : -1px 10px 0 0;
+          display         : inline-block;
+          padding         : 3px;
+          position        : relative;
+          text-align      : center;
+          line-height     : 14px;
+          margin-right    : 10px;
+          vertical-align  : middle;
+          background-color: $white;
+          @include border-radius(0);
+          @include transition(all 0.3s ease-in-out);
+          i{
+            top        : 2px;
+            left       : -1px;
+            color      : $black;
+            width      : 10px;
+            margin     : -4px auto;
+            display    : block;
+            opacity    : 0;
+            overflow   : visible;
+            position   : relative;
+            font-size  : 10px;
+            font-weight: 400;
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+      }
+    }
+  }
+  .checkbox-inline{
+    padding-left: 0;
+  }
+} 
+/*--  Custom Radio Styles  --*/
+.custom-radio{
+  margin-bottom: 5px;
+  label{
+    &.radio-inline{
+      input[type="radio"]{
+        display:none;
+        &:checked {
+          +  span{
+            border          : 1px solid $black;
+            padding         : 3px;
+            background-color: $white;
+            @include border-radius(0);
+            @include transition(all 0.3s ease-in-out);
+            i{
+              opacity: 1;
+            }
+          }
+        }
+        + span{
+          width           : 18px;
+          border          : 1px solid $custom-check-border;
+          cursor          : pointer;
+          height          : 18px;
+          margin          : -1px 10px 0 0;
+          display         : inline-block;
+          padding         : 3px;  
+          position        : relative;
+          text-align      : center;
+          line-height     : 14px;
+          margin-right    : 10px;
+          vertical-align  : middle;
+          background-color: $white;
+          @include border-radius(0);
+          @include transition(all 0.3s ease-in-out);
+          i{
+            top        : 2px;
+            left       : -1px;
+            width      : 10px;
+            color      : $black;
+            margin     : -4px auto;
+            display    : block;
+            opacity    : 0;
+            overflow   : visible;
+            position   : relative;
+            font-size  : 10px;
+            font-weight: 400;
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+      }
+    }
+  }
+  .radio-inline{
+    padding-left: 0;
+  }
+} 
+/*--*/
+
+
+
+
+.btn-black{
+  color           : $white;
+  border          : 1px solid $white;
+  padding         : 15px 30px;
+  min-width       : 200px;
+  font-size       : 14px;
+  text-align      : center;
+  line-height     : 16px;
+  letter-spacing  : 1px;
+  text-transform  : uppercase;
+  text-decoration : none; 
+  background-color: $black;
+  @include border-radius(0);
+  &:hover{
+    color           : $white;
+    border-color    : $white;
+    text-decoration : none; 
+    background-color: $black;
+  }
+  &:focus{
+    color           : $white;
+    border-color    : $white;
+    background-color: $black;
+    &:active{
+      color           : $white;
+      border-color    : $white;
+      background-color: $black;
+    }
+  }
+  &[disabled], &.btn-default[disabled]{
+    pointer-events  : none;
+    background-color: $gray;
+    &:hover, &:active, &:focus{
+      pointer-events  : none;
+      background-color: $gray;
+    }
+  }
+}
+
+
+
+.btn-theme-blue{
+  color           : $white;
+  border          : 0;
+  padding         : 13px 25px;
+  font-size       : 14px;
+  line-height     : 19px;	
+  background-color: $theme-blue-btn;
+  @extend .text-center;
+  @extend .ptsans-bold;
+  @include border-radius(3px);
+  &:hover, 
+  &:active, 
+  &:focus:active, 
+  &:focus:hover, 
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus{
+    color           : $white;
+    background-color: $theme-blue-btn;
+    @include box-shadow(none);
+  }
+  &:hover{
+    @include box-shadow(inset 0 2px 3px 0 rgba(0,0,0,0.5));
+  }
+  &[disabled], &:disabled, &.disabled{
+    color           : $white;
+    opacity         : 0.5;
+    cursor          : not-allowed;
+    background-color: $theme-blue-btn;
+  }
+}
+
+
+
+.btn-theme-dark{
+  color           : $white;
+  padding         : 9px 25px;
+  opacity         : 0.6;	
+  font-size       : 14px;	
+  line-height     : 20px;
+  background-color: $theme-dark-btn;
+  @extend .text-center;
+  @extend .ptsans-bold;
+  @include border-radius(3px);
+}
+
+
+
+.btn-theme-transparent{
+  color           : $white;
+  padding         : 9px 25px;
+  font-size       : 14px;	
+  line-height     : 20px;
+  background-color: transparent;
+  border: 1px solid $theme-border-color;
+  @extend .text-center;
+  @extend .ptsans-bold;
+  @include border-radius(3px);
+}
+
+
+.btn-theme-fb{
+  color           : $white;
+  border          : 0;
+  padding         : 13px 25px;
+  font-size       : 14px;
+  line-height     : 19px;	
+  background-color: $facebook-bg;
+  @extend .text-center;
+  @extend .ptsans-bold;
+  @include border-radius(3px);
+  &:hover, 
+  &:active, 
+  &:focus:active, 
+  &:focus:hover, 
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus{
+    color           : $white;
+    background-color: $facebook-bg;
+    @include box-shadow(none);
+  }
+  &:hover{
+    @include box-shadow(inset 0 2px 3px 0 rgba(0,0,0,0.5));
+  }
+  &[disabled], &:disabled, &.disabled{
+    color           : $white;
+    opacity         : 0.5;
+    cursor          : not-allowed;
+    background-color: $facebook-bg;
+  }
+}
+
+
+.form-input-theme{
+  width           : 100%;
+  color           : $theme-dark-btn;
+  border          : 1px solid $form-border;  
+  padding         : 12px 15px;
+  font-size       : 14px;
+  line-height     : 19px;
+  background-color: $white;
+  @include border-radius(3px);
+  @include box-shadow(inset 0 4px 4px -4px $placeholder-color);
+  &.select-input-theme{
+    height: 45px !important;
+    z-index: 1;
+    position: relative;
+    background-color: transparent;
+    @include appearance(none);
+  }
+  &:focus{
+    border-color: $form-border;
+    @include box-shadow(inset 0 4px 4px -4px $placeholder-color);
+  }
+}
+
+
+.form-label-theme{
+  color      : $theme-border-color;
+  width      : 100%;
+  margin     : 0;
+  font-size  : 14px;
+  line-height: 27px;
+}
+
+.form-custom-appearences{
+  position: relative;
+  .custom-appearence{
+    top: 50%;
+    right: 20px;
+    z-index: 0;
+    position: absolute;
+    @include translate(0, -50%);
+  }
+}
+
+.custom-fontawesome{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+  display                : inline-block;
+  font-style             : normal;
+  font-variant           : normal;
+  text-rendering         : auto;
+  line-height            : 1;
+  font-family            : "Font Awesome\ 5 Free";
+}
+
+.show-list-heading{
+  &:before{
+    top: 50%;
+    left: -15%;
+    width: 90px;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, rgba(246, 249, 255, 0), #d9e2f0);
+    @include translate(0, -50%);
+    @media (max-width: 991px) and (min-width: 768px){
+      left: -20%;
+    }
+    @media (max-width: 767px) and (min-width:320px){
+      display: none;
+    }
+  }
+  &:after{
+      top: 50%;
+      width: 90px;
+      right: -15%;
+      height: 2px;
+      content: "";
+      position: absolute;
+      background: linear-gradient(to left, rgba(246, 249, 255, 0), #d9e2f0);
+      @include translate(0, -50%);
+      @media (max-width: 991px) and (min-width: 768px){
+        right: -20%;
+      }
+      @media (max-width: 767px) and (min-width:320px){
+        display: none;
+      }
+  }
+}
+
+.text-ellipsis{
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* Slides Move Animation */
+@-webkit-keyframes slides-move{
+  0%{
+    opacity: 0;
+    @include transform(translate(0, 0) scale(0));
+  }
+  25%{
+    opacity: 0.5;
+    @include transform(translate(-200px, 200px) scale(0.5));
+  }
+}
+
+@keyframes slides-move{
+  0%{
+    opacity: 0;
+    @include transform(translate(0, 0) scale(0));
+  }
+  25%{
+    opacity: 0.5;
+    @include transform(translate(-200px, 200px) scale(0.5));
+  }
+}
+
+.slides-move {
+  -webkit-animation-name: slides-move;
+  -moz-animation-name: slides-move;
+  animation-name: slides-move;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+
+
+/* Badge Animation */
+@-webkit-keyframes badge-animate {
+  from {
+    @include transform(scale3d(1, 1, 1));
+  }
+
+  10%, 20% {
+    @include transform(scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg));
+  }
+
+  30%, 50%, 70%, 90% {
+    @include transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg));
+  }
+
+  40%, 60%, 80% {
+    @include transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg));
+  }
+
+  to {
+    @include transform(scale3d(1, 1, 1));
+  }
+}
+
+
+@keyframes badge-animate {
+  ffrom {
+    @include transform(scale3d(1, 1, 1));
+  }
+
+  10%, 20% {
+    @include transform(scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg));
+  }
+
+  30%, 50%, 70%, 90% {
+    @include transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg));
+  }
+
+  40%, 60%, 80% {
+    @include transform(scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg));
+  }
+
+  to {
+    @include transform(scale3d(1, 1, 1));
+  }
+}
+
+.badge-animate {
+  -webkit-animation-name: badge-animate;
+  -moz-animation-name: badge-name;
+  animation-name: badge-animate;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*Feed Layout*/
+.feed-container{
+  height: 325px;
+  @media (max-width: 480px) {
+    height: 388px;
+    margin-bottom: 10px;
+  }
+  border: solid 1px $form-border;
+  display: block;
+  padding: 0 15px;
+  position: relative;
+  margin-bottom: 30px;
+  text-decoration: none !important;
+  background-color: $white;
+  @include border-radius(3px);
+  .feed-header{
+    height: 56px;
+    border-bottom: 1px solid $form-border;
+    @media (max-width: 480px) {
+      height: 75px;
+      border: 0;
+    }
+    .feed-author-img{
+      margin-right: 15px;
+      >img{
+        object-fit: cover;
+        @include circle(30px);
+        @media (max-width: 480px) {
+          @include circle(37.2px); 
+        }
+      }
+    }
+    .feed-author-name{
+      color: $theme-dark-btn;
+      font-size: 13px;
+      @media (max-width: 480px) {
+        font-size: 16px;
+      }
+      @extend .ptsans-bold;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .feed-badge {
+      height: 20px;
+      padding: 4px 6px;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      @extend .ptsans-bold;
+      @extend .text-ellipsis;
+      @include border-radius(3px);
+      &.type-article{
+        color: $type-article;
+        background-color: $type-article-bg;
+      }
+      &.type-question{
+        color: $type-question;
+        background-color: $type-question-bg;
+      }
+      &.type-story{
+        color: $type-story;
+        background-color: $type-story-bg;
+      }
+      &.type-private {
+        color: $badge-private;
+        background-color: $badge-private-bg;
+        margin-right: 10px !important;
+        + .type-story{
+          margin-left: 0 !important;
+        }
+        + .type-article{
+          margin-left: 0 !important;
+        }
+        + .type-question{
+          margin-left: 0 !important;
+        }
+        i {
+          color: rgb(101, 117, 142);
+          padding-right: 7px;
+        }
+      }
+    }
+  }
+  .feed-body{
+    > a{
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    h4{
+      color: $theme-dark-btn;
+      margin: 12px 0 8px;
+      @media (max-width: 480px) {
+        margin: 18px 0 15px;
+      }
+      display: block;
+      overflow: hidden;
+      font-size: 16px;
+      max-height: 57px;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      @extend .ptsans-bold;
+    }
+    .feed-cover-image{
+      width: calc(50% - 30px);
+      height: calc(100% - 30px);
+      overflow: hidden;
+      > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include border-radius(3px);
+      }
+    }
+    p{
+      color: $theme-border-color;
+      margin: 0;
+      overflow: hidden;
+      font-size: 14px;
+      max-height: 185px;
+      line-height: 1.54;
+      @media (max-width: 480px) {
+        font-size: 13px;
+        max-height: 44px;
+      }
+    }
+  }
+  .feed-footer{
+    right: 15px;
+    width: 100%;
+    bottom: 15px;
+    position: absolute;
+    @media (max-width: 480px) {
+      right: 20px;
+    }
+    .feed-icons{
+      > div {
+        height: 18px;
+        &:not(:last-child){
+            margin-right: 28px;
+        }
+        > a{
+          display: inline-block;
+          font-size: 15px;
+          line-height: 15px;
+          margin-right: 4px;
+          &.icon-like{
+            >i{
+              svg{ 
+                path{
+                  @include transition(all 0.3s ease-in-out);
+                }
+              }
+            }
+            &.icon-liked{
+              >i{
+                svg{ 
+                  path{
+                    fill: $loved-it;
+                  }
+                }
+              }
+            }
+          }
+          > *{
+            color: $placeholder-color;
+          }
+        }
+        >span{
+          color: $theme-border-color;
+          font-size: 13px;
+          line-height: 12px;
+          @extend .ptsans-bold;
+        }
+      }
+    }
+  }
+}
+
+/* Global Search styles */
+
+
+.search-inner-circle{
+  margin-bottom: 10px;
+  .form-input-theme{
+      height: 40px;
+      padding-left: 40px;
+      @include placeholder-color($theme-border-color);
+  }
+  .inner-search-icon{
+      top: 50%;
+      left: 13px;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      @include translate(0, -50%);
+  }
+}
+
+
+/* Tool Tip CSS */
+.tooltip{
+  .tooltip-inner{
+    width: auto;
+    color: $white;
+    height: 32px;
+    padding: 0 10px;
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+    font-family: $ptsans;
+    justify-content: center;
+    @extend .ptsans-bold;
+  }
+}
