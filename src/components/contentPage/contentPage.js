@@ -24,7 +24,7 @@ export default class ContentPage extends Component {
 						<div className="profile-content-rating">
 							<RatingStars ratingName="HTML" rateNumber="html-number" rateOriginal="9"/>
 							<RatingStars ratingName="CSS" rateNumber="css-number" rateOriginal="9"/>
-							<RatingStars ratingName="Bootstrap" rateNumber="bootstrap-number" rateOriginal="9"/>
+							<RatingStars ratingName="Bootstrap" rateNumber="bootstrap-number" rateOriginal="3"/>
 						</div>
 						<div className="profile-content-">
 
